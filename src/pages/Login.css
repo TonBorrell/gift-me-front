@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #ffd23f;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gift-logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 8%;
+}
+
+.gift-logo__image {
+  width: 210px;
+  height: 210px;
+}
+
+.login-inputs {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-buttons {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.span {
+  height: 10%;
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.input-name,
+.input-password {
+  width: 26%;
+  height: 24%;
+  background: #f0f9ed;
+  border-style: none;
+  border-radius: 0;
+  border-bottom: solid #ee4266;
+  font-size: 100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border-radius: 10px;
+}
+
+.input-name:focus,
+.input-password:focus {
+  outline: none;
+  border-style: solid;
+  border-color: #ee4266;
+}

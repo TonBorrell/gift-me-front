@@ -1,0 +1,28 @@
+.div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.input-name,
+.input-password {
+  width: 26%;
+  height: 24%;
+  background: #f0f9ed;
+  border-style: none;
+  border-radius: 0;
+  border-bottom: solid #ee4266;
+  font-size: 100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border-radius: 10px;
+}
+
+.input-name:focus,
+.input-password:focus {
+  outline: none;
+  border-style: solid;
+  border-color: #ee4266;
+}
