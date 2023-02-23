@@ -1,0 +1,25 @@
+.header {
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh;
+  background-color: #f27078;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2vh;
+  font-size: 30px;
+}
+
+.logo__image {
+  padding-right: 2vh;
+  height: 40px;
+}
+
+.header__about {
+  font-size: 25px;
+}

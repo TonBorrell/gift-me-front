@@ -1,0 +1,21 @@
+.buttons-pref {
+  display: flex;
+  width: 30vw;
+  justify-content: space-around;
+}
+
+.preferences-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4vh;
+  height: 70vh;
+}
+
+.preferences-boxes-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

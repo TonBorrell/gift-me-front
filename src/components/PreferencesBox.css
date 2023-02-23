@@ -1,0 +1,24 @@
+.box-pref {
+  background-color: #ecaca5;
+  padding: 4vh;
+  max-width: 10%;
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+  border: 2px solid #f27078;
+}
+
+.box-pref:hover {
+  cursor: pointer;
+}
+
+.pref-image-inside {
+  height: 8vh;
+}
+
+.pref-text {
+  font-size: 3vh;
+}

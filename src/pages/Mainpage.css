@@ -1,0 +1,17 @@
+.mainpage {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.body-main {
+  margin: 0;
+  padding: 0;
+  height: 91vh;
+  background-color: #f08487;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

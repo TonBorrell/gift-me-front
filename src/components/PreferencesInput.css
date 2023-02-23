@@ -1,0 +1,12 @@
+.preference-input {
+  background: #f0f9ed;
+  border-style: none;
+  border-radius: 0;
+  border-bottom: solid #ee4266;
+  font-size: 100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border-radius: 10px;
+  height: 3.5vh;
+  width: 20vw;
+}
