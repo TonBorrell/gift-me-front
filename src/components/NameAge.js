@@ -1,4 +1,5 @@
 import React from "react";
+import Select from "react-select";
 
 import "./NameAge.css";
 
@@ -18,6 +19,19 @@ function NameAge(props) {
     }));
   };
 
+  const handleChangeSelect = (e) => {
+    props.setPreferences((prevState) => ({
+      ...prevState,
+      ["sex"]: e.value,
+    }));
+  };
+
+  const options = [
+    { value: "men", label: "Men" },
+    { value: "women", label: "Women" },
+    { value: "other", label: "Other" },
+  ];
+
   return (
     <div className="name-age-user">
       <h3>Your name</h3>
@@ -34,6 +48,10 @@ function NameAge(props) {
         name="age"
         onChange={handleChange}
       />
+      <h3>How do you indentify?</h3>
+      <div className="pref-select">
+        <Select options={options} onChange={handleChangeSelect} />
+      </div>
       <button onClick={buttonNext} className="pref-button">
         Next
       </button>

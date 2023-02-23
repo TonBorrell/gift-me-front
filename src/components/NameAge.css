@@ -13,7 +13,7 @@
 
 h3 {
   font-size: 2.5vh;
-  padding: 1.5vh;
+  padding-top: 2.5vh;
 }
 
 .pref-button {
@@ -29,4 +29,10 @@ h3 {
 
 .pref-button:hover {
   cursor: pointer;
+}
+
+.pref-select {
+  width: 20vw;
+  padding-bottom: 2.5vh;
+  font-size: 100%;
 }
