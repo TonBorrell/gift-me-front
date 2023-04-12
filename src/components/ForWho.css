@@ -19,3 +19,20 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.box-pref-button {
+  background-color: #ecaca5;
+  padding: 4vh;
+  max-width: 10%;
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+  border: 2px solid #f27078;
+}
+
+.box-pref-button:focus {
+  border: 2px solid aqua;
+}

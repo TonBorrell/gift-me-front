@@ -18,10 +18,15 @@ function ForWho(props) {
     <div className="name-age-user">
       <div className="preferences-boxes">
         <div className="preferences-boxes-row">
-          <PreferencesBox
-            text="Friend"
-            imageUrl="https://cdn-icons-png.flaticon.com/512/5067/5067805.png"
-          />
+          <button className="box-pref-button">
+            <div className="pref-image">
+              <img
+                className="pref-image-inside"
+                src="https://cdn-icons-png.flaticon.com/512/5067/5067805.png"
+              />
+            </div>
+            <div className="pref-text">Friend</div>
+          </button>
           <PreferencesBox
             text="Mother"
             imageUrl="https://cdn-icons-png.flaticon.com/512/739/739249.png"
