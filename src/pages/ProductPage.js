@@ -9,7 +9,7 @@ function ProductPage() {
 
   useEffect(() => {
     // Fetch the list of products from the API
-    fetch("http://127.0.0.1:80/product_rating/")
+    fetch(`${process.env.REACT_APP_BASE_URL}product_rating/`)
       .then((response) => response.json())
       .then((data) => {
         // Set the list of products to the state
@@ -54,7 +54,7 @@ function ProductPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(productRatings),
       };
-      fetch("http://127.0.0.1:80/product_rating/", requestOptions)
+      fetch(`${process.env.REACT_APP_BASE_URL}product_rating/`, requestOptions)
         .then((response) => response.json())
         .then((data) => this.setState({ postId: data.id }));
       navigate("/thanks");
