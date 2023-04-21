@@ -34,6 +34,8 @@ function SetNameAge() {
     navigate("setInterests");
   };
 
+  console.log(process.env.REACT_APP_BASE_URL);
+
   return (
     <div className="nameAgePage">
       <div className="nameInput">
