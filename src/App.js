@@ -6,8 +6,6 @@ import SetInterests from "./pages/SetInterests";
 import ProductPage from "./pages/ProductPage";
 import ThanksPage from "./pages/ThanksPage";
 
-require("dotenv").config();
-
 function App() {
   return (
     <BrowserRouter>
