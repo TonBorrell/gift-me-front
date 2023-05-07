@@ -58,7 +58,9 @@ function SetNameAge() {
           onChange={handleAgeChange}
         />
       </div>
-      <button onClick={handleNextPageClick}>Next Page</button>
+      <button onClick={handleNextPageClick} className="nextPageButton">
+        Next Page
+      </button>
     </div>
   );
 }

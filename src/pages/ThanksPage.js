@@ -12,9 +12,11 @@ function ThanksPage() {
   };
 
   return (
-    <div>
+    <div className="thanksText">
       Thanks!
-      <button onClick={restartButton}>Restart</button>
+      <button className="buttonThanks" onClick={restartButton}>
+        Restart
+      </button>
     </div>
   );
 }

@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import coffee from "../images/coffee2.png";
+import cooking from "../images/cooking.png";
+import sports from "../images/sports.png";
+import cars from "../images/cars.png";
+import technology from "../images/technology.png";
+import garden from "../images/garden.png";
+
+import "./SetInterests.css";
+
 function InterestPage() {
   let navigate = useNavigate();
   const [interests, setInterests] = useState({
@@ -43,79 +52,87 @@ function InterestPage() {
   };
 
   return (
-    <div>
-      <h1>Interests</h1>
-      <div>
-        <div
-          className="coffeeBox"
-          onClick={() => handleInterestClick("coffee")}
-          style={{
-            backgroundColor: interests.coffee ? "red" : null,
-          }}
-        >
-          <img src="/coffee.png" alt="Coffee" />
-          <p>Coffee</p>
-          {interests.coffee ? <span>selected</span> : null}
+    <div className="interestsPage">
+      <h1 className="title">What do you enjoy?</h1>
+      <div className="preferenceBoxes">
+        <div className="preferenceBoxes1">
+          <div
+            className="coffeeBox"
+            onClick={() => handleInterestClick("coffee")}
+            style={{
+              backgroundColor: interests.coffee ? "#ff9999" : null,
+            }}
+          >
+            <img src={coffee} alt="Coffee" />
+            <p>Coffee</p>
+            {interests.coffee ? <span>selected</span> : null}
+          </div>
+          <div
+            className="cookingBox"
+            onClick={() => handleInterestClick("cooking")}
+            style={{
+              backgroundColor: interests.cooking ? "#ff9999" : null,
+            }}
+          >
+            <img src={cooking} alt="Cooking" />
+            <p>Cooking</p>
+            {interests.cooking ? <span>Selected</span> : null}
+          </div>
+          <div
+            className="sportsBox"
+            onClick={() => handleInterestClick("sports")}
+            style={{
+              backgroundColor: interests.sports ? "#ff9999" : null,
+            }}
+          >
+            <img src={sports} alt="Sports" />
+            <p>Sports</p>
+            {interests.sports ? <span>Selected</span> : null}
+          </div>
         </div>
-        <div
-          className="cookingBox"
-          onClick={() => handleInterestClick("cooking")}
-          style={{
-            backgroundColor: interests.cooking ? "red" : null,
-          }}
-        >
-          <img src="/cooking.png" alt="Cooking" />
-          <p>Cooking</p>
-          {interests.cooking ? <span>Selected</span> : null}
-        </div>
-        <div
-          className="sportsBox"
-          onClick={() => handleInterestClick("sports")}
-          style={{
-            backgroundColor: interests.sports ? "red" : null,
-          }}
-        >
-          <img src="/sports.png" alt="Sports" />
-          <p>Sports</p>
-          {interests.sports ? <span>Selected</span> : null}
-        </div>
-        <div
-          className="carsBox"
-          onClick={() => handleInterestClick("cars")}
-          style={{
-            backgroundColor: interests.cars ? "red" : null,
-          }}
-        >
-          <img src="/cars.png" alt="Cars" />
-          <p>Cars</p>
-          {interests.cars ? <span>Selected</span> : null}
-        </div>
-        <div
-          className="technologyBox"
-          onClick={() => handleInterestClick("technology")}
-          style={{
-            backgroundColor: interests.technology ? "red" : null,
-          }}
-        >
-          <img src="/technology.png" alt="Technology" />
-          <p>Technology</p>
-          {interests.technology ? <span>Selected</span> : null}
-        </div>
-        <div
-          className="gardenBox"
-          onClick={() => handleInterestClick("garden")}
-          style={{
-            backgroundColor: interests.garden ? "red" : null,
-          }}
-        >
-          <img src="/garden.png" alt="Garden" />
-          <p>Garden</p>
-          {interests.garden ? <span>Selected</span> : null}
+        <div className="preferenceBoxes2">
+          <div
+            className="carsBox"
+            onClick={() => handleInterestClick("cars")}
+            style={{
+              backgroundColor: interests.cars ? "#ff9999" : null,
+            }}
+          >
+            <img src={cars} alt="Cars" />
+            <p>Cars</p>
+            {interests.cars ? <span>Selected</span> : null}
+          </div>
+          <div
+            className="technologyBox"
+            onClick={() => handleInterestClick("technology")}
+            style={{
+              backgroundColor: interests.technology ? "#ff9999" : null,
+            }}
+          >
+            <img src={technology} alt="Technology" />
+            <p>Technology</p>
+            {interests.technology ? <span>Selected</span> : null}
+          </div>
+          <div
+            className="gardenBox"
+            onClick={() => handleInterestClick("garden")}
+            style={{
+              backgroundColor: interests.garden ? "#ff9999" : null,
+            }}
+          >
+            <img src={garden} alt="Garden" />
+            <p>Garden</p>
+            {interests.garden ? <span>Selected</span> : null}
+          </div>
         </div>
       </div>
-      <div>
-        <button onClick={onPrevPage}>Back</button>
-        <button onClick={onNextPage}>Next</button>
+      <div className="buttonsDiv">
+        <button className="backPageButton" onClick={onPrevPage}>
+          Back
+        </button>
+        <button className="nextPageButton" onClick={onNextPage}>
+          Next
+        </button>
       </div>
     </div>
   );

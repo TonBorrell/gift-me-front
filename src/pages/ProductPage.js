@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import "./ProductPage.css";
+
 function ProductPage() {
   let navigate = useNavigate();
   const [products, setProducts] = useState([]);
@@ -62,14 +64,19 @@ function ProductPage() {
   }, [productRatings, currentProductIndex, products, navigate]);
 
   return (
-    <div>
+    <div className="productPage">
       {currentProduct ? (
-        <div>
-          <h1>{currentProduct.name}</h1>
-          <img src={currentProduct.image} alt={currentProduct.name} />
-          <p>{currentProduct.description}</p>
-          <div>
-            <span>Rating:</span>
+        <div className="productBox">
+          <h1 className="productName">{currentProduct.name}</h1>
+          <div className="productImageDiv">
+            <img
+              src={currentProduct.image}
+              alt={currentProduct.name}
+              className="productImage"
+            />
+          </div>
+          <p className="productDescription">{currentProduct.description}</p>
+          <div className="productRating">
             {[1, 2, 3, 4, 5].map((rating) => (
               <span
                 key={rating}
@@ -77,25 +84,31 @@ function ProductPage() {
                 style={{
                   color:
                     rating <= productRatings[currentProduct.asin]
-                      ? "gold"
+                      ? "#85b3e1"
                       : "gray",
                   cursor: "pointer",
                 }}
+                className="productStars"
               >
                 ★
               </span>
             ))}
           </div>
-          <button
-            onClick={handleBackClick}
-            disabled={currentProductIndex === 0}
-          >
-            Back
-          </button>
-          <button onClick={handleNextClick}>Next</button>
+          <div className="productButtons">
+            <button
+              onClick={handleBackClick}
+              disabled={currentProductIndex === 0}
+              className="buttonBack"
+            >
+              Back
+            </button>
+            <button onClick={handleNextClick} className="buttonNext">
+              Next
+            </button>
+          </div>
         </div>
       ) : (
-        <div>Loading products...</div>
+        <div className="loadingProducts">Loading products...</div>
       )}
     </div>
   );

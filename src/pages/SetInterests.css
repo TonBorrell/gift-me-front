@@ -1,0 +1,103 @@
+.interestsPage {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #ffd3d3;
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+}
+
+.preferenceBoxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffbcbc; /* #ffbcbc */
+}
+
+.preferenceBoxes1,
+.preferenceBoxes2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px;
+  width: 80%;
+}
+
+.coffeeBox,
+.cookingBox,
+.sportsBox,
+.carsBox,
+.technologyBox,
+.gardenBox {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  height: 230px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preferenceBoxes1 div:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.preferenceBoxes2 div:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.preferenceBoxes div img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  margin: auto;
+}
+
+.buttonsDiv {
+  text-align: center;
+  margin: 20px;
+}
+
+.backPageButton,
+.nextPageButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .preferenceBoxes {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .preferenceBoxes div {
+    padding: 10px;
+  }
+
+  .preferenceBoxes div img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 5px;
+  }
+
+  .backPageButton,
+  .nextPageButton {
+    font-size: 14px;
+  }
+}
