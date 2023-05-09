@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./ProductPage.css";
 
 function ProductPage() {
+  console.log('Hey')
   let navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
