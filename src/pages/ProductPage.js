@@ -49,12 +49,17 @@ function ProductPage() {
       (currentProductIndex === products.length) &
       (currentProductIndex !== 0)
     ) {
-      console.log(productRatings);
-      console.log(JSON.stringify(productRatings));
+      const user = JSON.parse(localStorage.getItem("user"));
+      const body_message = {
+        name: user.name,
+        age: user.age,
+        preferences: JSON.parse(localStorage.getItem("interests")),
+        rating: productRatings,
+      };
       const requestOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(productRatings),
+        body: JSON.stringify(body_message),
       };
       fetch(`${process.env.REACT_APP_BASE_URL}product_rating/`, requestOptions)
         .then((response) => response.json())
