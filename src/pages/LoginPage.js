@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import "./LoginPage.css";
+import logo from "../images/logo.png";
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -20,7 +22,7 @@ function LoginPage() {
         // Handle the login response here
         console.log("Login response:", data);
         // Navigate to the next page upon successful login
-        navigate("/setInterests");
+        navigate("/setNameAge");
       })
       .catch((error) => {
         // Handle any login errors here
@@ -32,29 +34,11 @@ function LoginPage() {
     // Call the sign-up endpoint with username and password
     // Replace 'your-signup-endpoint' with the actual sign-up endpoint URL
     navigate("/signup");
-    /*
-    fetch("your-signup-endpoint", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        // Handle the sign-up response here
-        console.log("Sign-up response:", data);
-        // Navigate to the next page upon successful sign-up
-        navigate("/dashboard");
-      })
-      .catch((error) => {
-        // Handle any sign-up errors here
-        console.error("Sign-up error:", error);
-      });
-      */
   };
 
   return (
     <div className="loginPage">
-      <img src="path/to/your/logo.png" alt="Logo" className="logoImage" />
+      <img src={logo} alt="Logo" className="logoImage" />
       <div className="inputContainer">
         <input
           type="text"
