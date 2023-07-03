@@ -31,13 +31,14 @@ function SetNameAge() {
     const user = { name: name, age: age };
     localStorage.setItem("user", JSON.stringify(user));
     // Navigate to the next page
-    navigate("setInterests");
+    navigate("/setInterests");
   };
 
   console.log(process.env.REACT_APP_BASE_URL);
 
   return (
     <div className="nameAgePage">
+      <h3 className="presentName">Who is the gift for?</h3>
       <div className="nameInput">
         <div className="nameAgeText">Name</div>
         <input

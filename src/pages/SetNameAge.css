@@ -8,6 +8,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+.presentName {
+  font-size: 36px;
+  color: rgb(71, 71, 71);
+}
+
 .nameInput,
 .ageInput {
   width: 100%;
@@ -17,6 +22,7 @@
 .nameAgeText {
   font-size: 20px;
   margin-bottom: 5px;
+  color: rgb(71, 71, 71);
 }
 
 .nameAgeInput {
