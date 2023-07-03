@@ -48,7 +48,7 @@ function InterestPage() {
 
   const onNextPage = () => {
     // Navigate to the back page
-    navigate("/productPage");
+    navigate("/productPageFinal");
   };
 
   return (
